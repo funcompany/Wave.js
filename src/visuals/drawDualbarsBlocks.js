@@ -26,6 +26,12 @@ export default (functionContext) => {
         ctx.lineTo(x, y + radiusObj.tl);
         ctx.quadraticCurveTo(x, y, x + radiusObj.tl, y);
         ctx.closePath();
+        if (options.colors[1]) {
+          ctx.fillStyle = options.colors[1];
+          ctx.fill();
+        }
+      
+        ctx.stroke();
       } else {
         ctx.rect(x, y, width, height);
       }
