@@ -1,6 +1,6 @@
 export default (functionContext) => {
   let { data, options, ctx, h, w } = functionContext;
-  let count = options.count || 50 ;
+  let count = (options.count || 25) * 2;
   let percent = h / 255;
   let width = w / count;
   let skip = true;
