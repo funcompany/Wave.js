@@ -1,10 +1,10 @@
 export default (functionContext) => {
   let { data, options, ctx, h, w } = functionContext;
-
+  let count = options.count || 50 ;
   let percent = h / 255;
-  let width = w / 50;
+  let width = w / count;
   let skip = true;
-  for (let point = 0; point <= 50; point++) {
+  for (let point = 0; point <= count; point++) {
     let p = data[point]; //get value
     p *= percent;
     let x = width * point;
